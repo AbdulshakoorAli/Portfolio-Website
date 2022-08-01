@@ -19,6 +19,7 @@
 .navbar.sticky {
   padding: 13px 0px;
   background-color: crimson;
+  z-index: 1;
 }
 
 .cart {
@@ -111,8 +112,8 @@
   background-color: crimson;
   color: #fff;
   font-size: 27px;
-  padding: 9px 24px;
-  margin: 16px 0px;
+  padding: 4px 20px;
+  margin: 14px 0px;
   border-radius: 6px;
   border: 2px solid crimson;
   transition: all 0.3s ease;
@@ -124,11 +125,11 @@
 
 /* ------- ABOUT-US ----------- */
 
-.about {
+.about , .skills , .contact{
   font-family: "Poppins";
   padding-top: 90px;
 }
-.about .title {
+.title {
   font-family: "Ubuntu";
   text-align: center;
   font-size: 40px;
@@ -137,7 +138,7 @@
   padding-bottom: 3px;
 }
 
-.about .title-below {
+.title-below {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -146,7 +147,7 @@
   width: 18%;
   margin-bottom: 30px;
 }
-.about .title-below h3 {
+.title-below h3 {
   font-family: "Ubuntu";
   font-size: 20px;
   color: crimson;
@@ -154,7 +155,7 @@
   font-weight: 500;
   background: #fff;
 }
-.about .title-below hr {
+.title-below hr {
   width: 16%;
   display: inline-block;
   border: 1.6px solid #111;
@@ -163,46 +164,148 @@
   margin: 5px;
 }
 
-.about .about-content {
+.content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.about .about-content .about-left-content img {
+.content .first-column-content img {
   height: 400px;
   width: 400px;
   object-fit: cover;
 }
 
-.about .about-content .about-right-content h2 {
+ .content .second-column-content h2 {
   font-family: "Poppins", sans-serif;
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.about .about-content .about-right-content {
-  width: 50%;
+.content .second-column-content {
+  width: 55%;
 }
 
-.about .about-content .about-right-content a
-{
+.content .second-column-content a {
   font-size: 22px;
   padding: 5px 24px;
   margin: 14px 0px;
   border-radius: 7px;
-
 }
-.about .about-content .about-right-content span
-{
-  color:crimson
+.content .second-column-content span {
+  color: crimson;
 }
-.about .about-content .about-right-content p
-{
+ .content .second-column-content p {
   text-align: justify;
 }
+
+/* ------- SKILLS ----------- */
+
+.cart .content .skill-information {
+  width: 50%;
+  margin-left: 30px;
+  padding-left: 30px;
+}
+.cart .content .skill-information .bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.cart .content .skill-information .bar span {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.cart .content .skill-information .line {
+  height: 5px;
+  width: 100%;
+  background: lightgrey;
+  position: relative;
+}
+
+.cart .content .skill-information .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: crimson;
+}
+
+.cart .content .skill-information .html::before {
+  width: 85%;
+}
+.cart .content .skill-information .css::before {
+  width: 75%;
+}
+.cart .content .skill-information .js::before {
+  width: 65%;
+}
+.cart .content .skill-information .react::before {
+  width: 70%;
+}
+.cart .content .skill-information .php::before {
+  width: 65%;
+}
+.cart .content .skill-information .mysql::before {
+  width: 80%;
+}
+
+
+/* ------- CONTACT ----------- */
+
+.fa-user:before {
+  content: "\f007";
+}
+.fa-place:before {
+  content: "\f3c5"
+}
+.fa-email:before {
+  content: "\f0e0"
+}
+.fa-phone:before {
+  content: "\f017";
+}
+
+.contact .cart .content .icons .row
+{
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+.contact .cart .content .icons .key
+{
+  font-weight: 600;
+  color: crimson;
+}
+.contact .cart .content .icons .info
+{
+  margin-left: 30px;
+}
+
+.contact .cart .form input , .contact .cart .form textarea 
+{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+
+
+
 /* ------- RESPONSIVE ----------- */
 @media (max-width: 1065px) {
   /* .menu-btn button
@@ -211,8 +314,6 @@
     z-index: 999;
   } */
   .cart {
-    margin: auto;
-    width: 90%;
     padding: 4px 10px;
   }
 
