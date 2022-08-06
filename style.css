@@ -111,13 +111,15 @@
   display: inline-block;
   background-color: crimson;
   color: #fff;
-  font-size: 27px;
-  padding: 4px 20px;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 7px 23px;
   margin: 14px 0px;
   border-radius: 6px;
   border: 2px solid crimson;
   transition: all 0.3s ease;
 }
+
 .button:hover {
   color: crimson;
   background: transparent;
@@ -125,7 +127,9 @@
 
 /* ------- ABOUT-US ----------- */
 
-.about , .skills , .contact{
+.about,
+.skills,
+.contact {
   font-family: "Poppins";
   padding-top: 90px;
 }
@@ -170,6 +174,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 80px;
 }
 
 .content .first-column-content img {
@@ -178,7 +183,7 @@
   object-fit: cover;
 }
 
- .content .second-column-content h2 {
+.content .second-column-content h2 {
   font-family: "Poppins", sans-serif;
   font-size: 25px;
   font-weight: 600;
@@ -189,25 +194,24 @@
   width: 55%;
 }
 
-.content .second-column-content a {
-  font-size: 22px;
-  padding: 5px 24px;
-  margin: 14px 0px;
+.content .second-column-content a,
+.form-button {
+  font-size: 20px;
+  padding: 4px 22px;
+  margin: 9px 0px;
   border-radius: 7px;
 }
 .content .second-column-content span {
   color: crimson;
 }
- .content .second-column-content p {
+.content .second-column-content p {
   text-align: justify;
 }
 
 /* ------- SKILLS ----------- */
 
 .cart .content .skill-information {
-  width: 50%;
-  margin-left: 30px;
-  padding-left: 30px;
+  width: 46%;
 }
 .cart .content .skill-information .bar {
   display: flex;
@@ -258,6 +262,12 @@
   width: 80%;
 }
 
+.skills .my-skils-and-experience {
+  margin: auto;
+  width: 75%;
+  text-align: center;
+  padding: 25px;
+}
 
 /* ------- CONTACT ----------- */
 
@@ -265,46 +275,65 @@
   content: "\f007";
 }
 .fa-place:before {
-  content: "\f3c5"
+  content: "\f3c5";
 }
 .fa-email:before {
-  content: "\f0e0"
+  content: "\f0e0";
 }
 .fa-phone:before {
   content: "\f017";
 }
 
-.contact .cart .content .icons .row
-{
+.contact .contact-us-cart {
+  padding-top: 25px;
+}
+
+.contact .cart .content .icons .row {
   display: flex;
   align-items: center;
-  margin: 20px;
+  margin: 16px;
 }
-.contact .cart .content .icons .key
-{
+.contact .cart .content .icons .key {
   font-weight: 600;
   color: crimson;
 }
-.contact .cart .content .icons .info
-{
+.contact .cart .content .icons .info {
   margin-left: 30px;
 }
 
-.contact .cart .form input , .contact .cart .form textarea 
-{
-  height: 100%;
-  width: 100%;
+.contact .cart .form input,
+.contact .cart .form textarea {
   border: 1px solid lightgrey;
   border-radius: 6px;
   outline: none;
-  padding: 0 15px;
+  padding: 8px 15px;
+  margin: 3px 0px;
   font-size: 17px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
 }
 
+.contact .cart .form input[placeholder="Subject"] {
+  width: 100%;
+}
 
+.content .form h2 {
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+#get-into-touch {
+  width: 40%;
+}
 
+/* ------- FOOTER ----------- */
+
+footer {
+  background: #111;
+  padding: 15px 23px;
+  color: #fff;
+  text-align: center;
+}
 
 /* ------- RESPONSIVE ----------- */
 @media (max-width: 1065px) {
