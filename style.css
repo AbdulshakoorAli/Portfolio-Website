@@ -55,7 +55,7 @@
   font-weight: 500;
   color: #fff;
   font-size: 18px;
-  margin-left: 2.25rem;
+  margin-left: 2rem;
   transition: color 0.3s ease;
 }
 
@@ -67,12 +67,15 @@
   color: #fff;
 }
 
-/* .menu-btn 
-{
-  color: #fff;
-  cursor: pointer;
-  display: none;
-} */
+/* ------- GENERAL CSS ----------- */
+
+.about,
+.skills,
+.contact,
+.services {
+  font-family: "Poppins";
+  padding-top: 90px;
+}
 
 /* ------- HOME SECTION ----------- */
 
@@ -127,12 +130,6 @@
 
 /* ------- ABOUT-US ----------- */
 
-.about,
-.skills,
-.contact {
-  font-family: "Poppins";
-  padding-top: 90px;
-}
 .title {
   font-family: "Ubuntu";
   text-align: center;
@@ -140,6 +137,9 @@
   font-weight: 500;
   margin-bottom: 3px;
   padding-bottom: 3px;
+}
+.title-color-change {
+  color: #fff;
 }
 
 .title-below {
@@ -151,14 +151,15 @@
   width: 18%;
   margin-bottom: 30px;
 }
+
 .title-below h3 {
   font-family: "Ubuntu";
   font-size: 20px;
   color: crimson;
   padding: 0 5px;
   font-weight: 500;
-  background: #fff;
 }
+
 .title-below hr {
   width: 16%;
   display: inline-block;
@@ -168,11 +169,16 @@
   margin: 5px;
 }
 
+.title-below-change hr {
+  border: 1.6px solid #fff;
+  color: #fff;
+}
+
 .content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   margin-bottom: 80px;
 }
@@ -196,8 +202,8 @@
 
 .content .second-column-content a,
 .form-button {
-  font-size: 20px;
-  padding: 4px 22px;
+  font-size: 17px;
+  padding: 8px 22px;
   margin: 9px 0px;
   border-radius: 7px;
 }
@@ -206,6 +212,60 @@
 }
 .content .second-column-content p {
   text-align: justify;
+}
+
+/* ------- SERVICES ----------- */
+.services {
+  color: #fff;
+  background-color: black;
+  height: 88vh;
+}
+
+.services .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 53px auto;
+  width: 80%;
+}
+.box {
+  width: calc(31% - 20px);
+  height: 42vh;
+  background: #222;
+  text-align: center;
+  border-radius: 9px;
+  padding: 50px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s all ease-in;
+}
+
+.box:hover {
+  background-color: crimson;
+  color: #fff;
+}
+.box h2 {
+  font-weight: 600;
+}
+
+.fa-crop-simple::before {
+  content: "\f565";
+}
+
+.box i {
+  font-size: 55px;
+  color: crimson;
+  padding: 10px;
+  margin-top: 2px;
+}
+.box h2,
+p {
+  margin: 2px;
 }
 
 /* ------- SKILLS ----------- */
@@ -329,12 +389,19 @@
 /* ------- FOOTER ----------- */
 
 footer {
+  font-family: "Poppins";
   background: #111;
   padding: 15px 23px;
   color: #fff;
   text-align: center;
 }
+.fa-copyright::before {
+  content: "\f1f9";
+}
 
+footer span {
+  color: crimson;
+}
 /* ------- RESPONSIVE ----------- */
 @media (max-width: 1065px) {
   /* .menu-btn button
