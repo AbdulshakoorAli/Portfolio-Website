@@ -184,8 +184,8 @@
 }
 
 .content .first-column-content img {
-  height: 400px;
-  width: 400px;
+  height: 350px;
+  width: 350px;
   object-fit: cover;
 }
 
@@ -212,6 +212,44 @@
 }
 .content .second-column-content p {
   text-align: justify;
+}
+.content .tab-title {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  margin: 18px 0px;
+}
+
+.content .tab-title .tab-title-item {
+  margin: 7px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s all ease-in;
+  width: 100%;
+  background-color: crimson;
+  color: white;
+  border: 2px solid crimson;
+  border-radius: 7px;
+  font-size: medium;
+  font-weight: inherit;
+  transition: 0.3s all ease-in;
+}
+.content .tab-title .tab-title-item:hover {
+  background-color: #fff;
+  color: crimson;
+}
+
+.content .second-column-content li {
+  list-style: none;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.content .tab {
+  display: none;
+}
+.content .active {
+  display: block;
 }
 
 /* ------- SERVICES ----------- */
@@ -246,7 +284,7 @@
 }
 
 .box:hover {
-  background-color: crimson;
+  background-color: rgb(56, 26, 32);
   color: #fff;
 }
 .box h2 {
@@ -301,6 +339,25 @@ p {
   left: 0;
   top: 0;
   background: crimson;
+}
+
+.cart .content .skill-information .c::before {
+  width: 75%;
+}
+.cart .content .skill-information .cplus::before {
+  width: 80%;
+}
+.cart .content .skill-information .java::before {
+  width: 72%;
+}
+.cart .content .skill-information .python::before {
+  width: 68%;
+}
+.cart .content .skill-information .git::before {
+  width: 80%;
+}
+.cart .content .skill-information .spring::before {
+  width: 58%;
 }
 
 .cart .content .skill-information .html::before {
